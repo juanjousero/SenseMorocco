@@ -1,69 +1,57 @@
 // Declaramos las variables del DOM
-const imagesArray = Array.from(document.getElementsByClassName('dream-image'));
+const imagesArray = Array.from(document.getElementsByClassName('dream-image-div'));
 
-const leftArrowDream = Array.from(document.getElementsByClassName('dream-arrow'))[0];
-const rightArrowDream = Array.from(document.getElementsByClassName('dream-arrow'))[1];
 
 // Definimos las funciones que se activan con el click
-let clicks = 0;
 
-const removeClasses = () => {
-    imagesArray.forEach((element) => {
-        element.classList.remove('transformFirstReverse');
-        element.classList.remove('transformOriginReverse');
-        element.classList.remove('transformOrigin');
-        element.classList.remove('transformFirst');
-    });
-}
+const createDiv = (index) => {
+    const cityDiv = document.createElement('div');
+    const cityParagraph = document.createElement('p');
+    const cityArrow = document.createElement('img');
 
-const showPreviuosImage = () => {
-    console.log('Test');
-    if (clicks >= 2) {
-        return;
-    }
-    switch(clicks) {
+    cityDiv.appendChild(cityParagraph);
+    cityDiv.appendChild(cityArrow);
+    cityDiv.classList.add('city-card');
+    cityParagraph.classList.add('city-name');
+    cityArrow.src = './resources/Images/dreamSlider/Arrow1.svg';
+    cityArrow.classList.add('city-arrow');
+
+    switch (index) {
         case 0:
-            removeClasses();
-            imagesArray.forEach((element) => {
-                element.classList.add('transformOrigin')
-            });
-            clicks++;
+            cityParagraph.innerHTML = 'Marraketch';
             break;
         case 1:
-            removeClasses();
-            imagesArray.forEach((element) => {
-                element.classList.add('transformFirst')
-            });
-            clicks++;
-            break;
-    }
-}
-
-const showNextImage = () => {
-    console.log('Test2');
-    if (clicks <= 0) {
-        return;
-    }
-    switch(clicks) {
-        case 1:
-            removeClasses();
-            imagesArray.forEach((element) => {
-                element.classList.add('transformOriginReverse')
-            });
-            clicks--;
+            cityParagraph.innerHTML = 'Chaouen';
             break;
         case 2:
-            removeClasses();
-            imagesArray.forEach((element) => {
-                element.classList.add('transformFirstReverse')
-            });
-            clicks--;
+            cityParagraph.innerHTML = 'Casablanca';
             break;
+        case 3:
+            cityParagraph.innerHTML = 'Ouarzazate';
+            break;
+    }
+
+    return cityDiv;
+}
+
+const showCityCard = (event) => {
+    console.log(event.target);
+    let index = imagesArray.indexOf(event.target);
+    const cityCard = createDiv(index);
+    event.target.appendChild(cityCard);
+}
+
+const removeCityCard = (event) => {
+    if (event.target.hasChildNodes()) {
+        const cityCard = document.querySelector('.city-card');
+        event.target.removeChild(cityCard);
     }
 }
 
 
 // Añadimos escuchadores a las flechas
 
-leftArrowDream.addEventListener('click', showNextImage);
-rightArrowDream.addEventListener('click', showPreviuosImage);
+imagesArray.forEach((image) => {
+    image.addEventListener('mouseenter', showCityCard);
+    image.addEventListener('mouseleave', removeCityCard);
+})

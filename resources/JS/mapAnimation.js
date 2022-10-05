@@ -14,7 +14,7 @@ const citiesArray = ['Guelmim', 'El Aaiún', 'Marrakech', 'Safi', 'Oujda', 'Ouar
 const subheadingsArray = ['Guelmim, historia y arqueología', 'El Aaiún, la región de las arenas', 'Marrakech con los cinco sentidos',
 'Safi, tierra de alfareros', 'Oujda, el esplendor del Mediterráneo', 'Ouarzazate, trasladarse a otro milenio', 'Meknès, ciudad imperial',
 'Dakhla, juega a las arenas Robinsons', 'Al Hoceima, destino de ensueño', 'Beni Melal, cruce de historia', 'Tanger, referente Fenicio',
-'Settat, el granero de Marruecos', 'Fès con la medina más grande', 'Kenitra con su puerto pesquero', 'Casablanca con los cinco sentidos',
+'Settat, el granero de Marruecos', 'Fès con la medina más grande', 'Kenitra con su puerto pesquero', 'Casablanca, la energía de la modernidad',
 'Rabat, capital Marroquí'];
 const textArray = ['Lorem Ipsum dolor sit amet, consectetur adpiscing elit. Lorem ut arcu pretium maecenas id enim. Interdum commodo diam massa nec nisi suscipit ultrices orci, scelerisque. Blandit lorem sollicitudin cras elementum convallis feugiat sapien.',
 'Lorem Ipsum dolor sit amet, consectetur adpiscing elit. Lorem ut arcu pretium maecenas id enim. Interdum commodo diam massa nec nisi suscipit ultrices orci, scelerisque. Blandit lorem sollicitudin cras elementum convallis feugiat sapien.',
