@@ -986,6 +986,29 @@ footer::before {
         padding-left: 22%;
     }
 
+    #dream-slide {
+        padding-left: 0;
+    }
+
+    .dream-image-div {
+        width: 319.5px;
+        margin-left: 31.5px;
+    }
+
+    .dream-image {
+        width: 319.5px;
+    }
+
+    .city-card {
+        width: 319.5px;
+        height: 50px;
+        margin-top: -53px;
+    }
+
+    .city-name {
+        font-size: 18px;
+    }
+
     #country-title {
         padding-bottom: 40px;
     }
