@@ -35,9 +35,9 @@ const createDiv = (index) => {
 }
 
 const showCityCard = (event) => {
-    console.log(event.target);
     let index = imagesArray.indexOf(event.target);
     const cityCard = createDiv(index);
+    console.log(event.target);
     event.target.appendChild(cityCard);
 }
 
@@ -55,3 +55,27 @@ imagesArray.forEach((image) => {
     image.addEventListener('mouseenter', showCityCard);
     image.addEventListener('mouseleave', removeCityCard);
 })
+
+// Scrolling with drag movement
+
+// const dragBox = document.getElementById('drag');
+const dragContainer = document.getElementById('dream-images-slide');
+let initialPosition;
+
+const scrollingDiv = (event) => {
+  dragContainer.scrollLeft = (event.clientX - initialPosition);
+}
+
+const cancelFunction = () => {
+  dragContainer.removeEventListener('mousemove', scrollingDiv);
+  dragContainer.style.cursor = "grab";
+}
+
+const mouseDownFunction = (event) => {
+  initialPosition = event.clientX;
+  dragContainer.style.cursor = "grabbing";
+  dragContainer.addEventListener('mousemove', scrollingDiv);
+}
+
+dragContainer.addEventListener('mousedown', mouseDownFunction);
+dragContainer.addEventListener('mouseup', cancelFunction);

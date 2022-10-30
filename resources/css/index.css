@@ -34,6 +34,10 @@ header {
     padding-left: 5.2%;
 }
 
+#logo-header:hover {
+    cursor: pointer;
+}
+
 #hamburger-header {
     width: auto;
     height: auto;
@@ -232,30 +236,19 @@ main {
 
 #country-slider-div {
     width: 100%;
-    min-height: 1270.2px;
+    min-height: 66.16vw;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     border-bottom: 2px solid rgba(197, 159, 77);
 }
 
-#country-slider-div::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url('../Images/tema-arabico.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0% -13%;
-    transform: scale(1, -1);
-    z-index: 10;
-}
-
 #country-slider {
     width: 100%;
-    min-height: 874.2px;
+    min-height: 45.53vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,15 +336,17 @@ main {
 
 #slider-text {
     width: 100%;
-    height: 396px;
+    height: 20.62vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(255,178,144,1) 100%); 
     padding-top: 74px;
     box-sizing: border-box;
+    background-image: url('../Images/imagen-trama.svg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 #slider-text p {
@@ -514,7 +509,7 @@ main {
     align-items: center;
     background-image: url('../Images/platos-marruecos.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 
@@ -610,23 +605,6 @@ main {
     position: relative;
     overflow: hidden;
     border-bottom: 2px solid rgba(197, 159, 77);
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(255,178,144,1) 100%); 
-}
-
-#dream-cities::before {
-content: '';
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background-image: url('../Images/tema-arabico.png');
-background-size: contain;
-background-repeat: no-repeat;
-background-position: 0% -13%;
-transform: scale(1, -1);
-z-index: 10;
 }
 
 #dream-title {
@@ -670,24 +648,48 @@ z-index: 10;
 
 #dream-slide {
     width: 100%;
-    height: 1002px;
+    height: 55.93vw;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     overflow-x: hidden;
+    z-index: 99;
+    background-image: url("../Images/imagen-trama.svg");
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#dream-images-slide {
+    width: 88.5%;
+    height: 70vh;
+    margin-top: 72px;
+    margin-left: 11.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-shrink: 0;
+    overflow-x: scroll;
+    scrollbar-width: 0;
+    scrollbar-color: transparent transparent;
 }
 
 .dream-image-div {
-    width: 392.53px;
+    min-width: 20.5vw;
+    max-width: 500px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     margin-top: 3.75%;
     margin-left: 42.47px;
     z-index: 99;
 }
 
 .dream-image {
-    width: 392.53px;
+    width: 100%;
     height: auto;
     border-radius: 20px;
     background: rgb(196, 196, 196);
@@ -695,27 +697,32 @@ z-index: 10;
     z-index: 98;
 }
 
-.image1 {
+.dream-image1 {
     margin-left: 0%;
+    padding-left: 3.5%;
 }
 
-.image4 {
-    max-height: 625.25px;
+.dream-image4 {
+    padding-right: 15%;
 }
 
 .city-card {
-    width: 392.53px;
-    height: 88px;
+    width: 100%;
+    min-height: 88px;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-top: -23%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: rgba(255, 255, 255, 1);
     z-index: 99;
+    bottom: 3.8vw;
+}
+
+.city-card:hover {
+    cursor: pointer;
 }
 
 .city-name {
@@ -1003,7 +1010,7 @@ z-index: 10;
     height: 33.07vw;
     background-image: url('../Images/countryMap/countryDivImage.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 /* Footer */
@@ -1016,7 +1023,6 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(255,178,144,1) 100%); 
 }
 
 footer::before {
@@ -1026,11 +1032,11 @@ footer::before {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('../Images/tema-arabico.png');
-    background-size: cover;
+    background-image: url("../Images/imagen-trama.svg");
+    background-size: 100%;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-position: 0% 37%;
-    z-index: 10;
+    transform: rotate(180deg);
 }
 
 #logo-footer {
@@ -1038,6 +1044,10 @@ footer::before {
     height: auto;
     margin-top: 135px;
     z-index: 999;
+}
+
+#logo-footer:hover {
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -1059,23 +1069,8 @@ footer::before {
         top: 614.2px;
     }
 
-    #dream-slide {
-        padding-left: 0;
-    }
-
-    .dream-image-div {
-        width: 319.5px;
-        margin-left: 31.5px;
-    }
-
     .dream-image {
-        width: 319.5px;
-    }
-
-    .city-card {
-        width: 319.5px;
-        height: 50px;
-        margin-top: -53px;
+        width: 100%;
     }
 
     .city-name {
@@ -1084,9 +1079,5 @@ footer::before {
 
     #country-title {
         padding-bottom: 40px;
-    }
-
-    footer::before {
-        background-position: 0% 65%;
     }
 }
