@@ -37,7 +37,6 @@ const createDiv = (index) => {
 const showCityCard = (event) => {
     let index = imagesArray.indexOf(event.target);
     const cityCard = createDiv(index);
-    console.log(event.target);
     event.target.appendChild(cityCard);
 }
 

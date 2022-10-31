@@ -12,6 +12,14 @@ h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
 }
 
+h1 {
+    font-size: calc(1rem + 1vw) !important;
+}
+
+h2 {
+    font-size: calc(1rem + 0.21vw) !important;
+}
+
 /* Header */
 
 header {
@@ -97,7 +105,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    z-index: 5;
+    z-index: 99;
     opacity: 0;
 }
 
@@ -105,6 +113,7 @@ main {
     width: auto;
     height: auto;
     padding-top: 43.125%;
+    z-index: 99;
 }
 
 #scroll-circle {
@@ -140,13 +149,13 @@ main {
 
 #dream-country h2 {
     font-weight: 700;
-    font-size: 20px;
+    /* font-size: 20px; */
     line-height: 26.66px;
 }
 
-#dream-country h3 {
+#dream-country h1 {
     font-weight: 400;
-    font-size: 35px;
+    /* font-size: 35px; */
     line-height: 46.66px;
 }
 
@@ -353,7 +362,7 @@ main {
     width: 28.125%;
     height: auto;
     padding: 0 1.82%;
-    font-size: 20px;
+    font-size: calc(1rem + 0.21vw);
     font-weight: 400;
 }
 
@@ -548,7 +557,7 @@ main {
 
 #culture-heading h1 {
     padding-left: 26px;
-    font-size: 35px;
+    /* font-size: 35px; */
     font-weight: 400;
     line-height: 46.66px;
 }
@@ -563,7 +572,7 @@ main {
 }
 
 #culture-text p {
-    font-size: 20px;
+    font-size: calc(1rem + 0.21vw);
     line-height: 24px;
     margin-bottom: 21px;
 }
@@ -633,13 +642,13 @@ main {
 
 #dream-title h1 {
     padding-left: 19px;
-    font-size: 35px;
+    /* font-size: 35px; */
     font-weight: 400;
     line-height: 46.66px;
 }
 
 #dream-title h2 {
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 700;
     margin-top: 4px;
     margin-left: 96px;
@@ -807,13 +816,13 @@ main {
 
 #country-mandala h1 {
     padding-left: 18px;
-    font-size: 35px;
+    /* font-size: 35px; */
     font-weight: 400;
     line-height: 46.66px;
 }
 
 #country-title h2 {
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 700;
     padding-left: 97px;
 }
@@ -828,8 +837,10 @@ main {
 }
 
 #map {
-    width: 750px;
-    min-height: 756px;
+    min-width: 500px;
+    width: 39vw;
+    height: 39.375vw;
+    max-height: 850px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -847,102 +858,162 @@ main {
 }
 
 .map01 {
-    top: 100.99px;
-    left: 264.96px;
+    width: 14.69vw;
+    height: 6vw;
+    top: 5.26vw;
+    left: 13.80vw;
     background-image: url('../Images/countryMap/country01.svg');
 }
 
 .map02 {
-    top: 154.944px;
-    left: 140.928px;
+    width: 9.43vw;
+    height: 6vw;
+    top: 8.07vw;
+    left: 7.34vw;
     background-image: url('../Images/countryMap/country02.svg');
 }
 
 .map03 {
-    top: 46.08px;
-    left: 397.056px;
+    width: 6.15vw;
+    height: 3vw;
+    top: 2.40vw;
+    left: 20.68vw;
     background-image: url('../Images/countryMap/country03.svg');
 }
 
 .map04 {
-    top: 33.024px;
-    left: 412.032px;
+    width: 3.28vw;
+    height: 3vw;
+    top: 1.72vw;
+    left: 21.46vw;
     background-image: url('../Images/countryMap/country04.svg');
 }
 
 .map05 {
-    top: -5.952px;
-    left: 628.032px;
+    /* top: -5.952px;
+    left: 628.032px; */
+    width: 6.51vw;
+    height: 4.5vw;
+    top: -0.31vw;
+    left: 32.71vw;
     background-image: url('../Images/countryMap/country05.svg');
 }
 
 .map06 {
-    top: 67.968px;
-    left: 372.096px;
+    /* top: 67.968px;
+    left: 372.096px; */
+    width: 11.98vw;
+    height: 4vw;
+    top: 3.54vw;
+    left: 19.38vw;
     background-image: url('../Images/countryMap/country06.svg');
 }
 
 .map07 {
-    top: 15.936px;
-    left: 533.952px;
+    /* top: 15.936px;
+    left: 533.952px; */
+    width: 7.14vw;
+    height: 5vw;
+    top: 0.83vw;
+    left: 27.81vw;
     background-image: url('../Images/countryMap/country07.svg');
 }
 
 .map08 {
-    top: 253.056px;
-    left: 0px;
+    /* top: 253.056px;
+    left: 0px; */
+    width: 15vw;
+    height: 7vw;
+    top: 13.18vw;
+    left: 0vw;
     background-image: url('../Images/countryMap/country08.svg');
 }
 
 .map09 {
-    top: -3.072px;
-    left: 570.048px;
+    /* top: -3.072px;
+    left: 570.048px; */
+    width: 4.9vw;
+    height: 2vw;
+    top: -0.16vw;
+    left: 29.69vw;
     background-image: url('../Images/countryMap/country09.svg');
 }
 
 .map10 {
-    top: 44.928px;
-    left: 503.04px;
+    /* top: 44.928px;
+    left: 503.04px; */
+    width: 3.7vw;
+    height: 2vw;
+    top: 2.34vw;
+    left: 26.20vw;
     background-image: url('../Images/countryMap/country10.svg');
 }
 
 .map11 {
-    top: -15.936px;
-    left: 537.024px;
+    /* top: -15.936px;
+    left: 537.024px; */
+    width: 3.59vw;
+    height: 1.4vw;
+    top: -0.83vw;
+    left: 27.97vw;
     background-image: url('../Images/countryMap/country11.svg');
 }
 
 .map12 {
-    top: 24px;
-    left: 466.944px;
+    /* top: 24px;
+    left: 466.944px; */
+    width: 4.58vw;
+    height: 2vw;
+    top: 1.25vw;
+    left: 24.32vw;
     background-image: url('../Images/countryMap/country12.svg');
 }
 
 .map13 {
-    top: 14.016px;
-    left: 569.088px;
+    /* top: 14.016px;
+    left: 569.088px; */
+    width: 5.36vw;
+    height: 2vw;
+    top: 0.73vw;
+    left: 29.64vw;
     background-image: url('../Images/countryMap/country13.svg');
 }
 
 .map14 {
-    top: 0.96px;
-    left: 521.088px;
+    /* top: 0.96px;
+    left: 521.088px; */
+    width: 3.13vw;
+    height: 1.2vw;
+    top: 0.05vw;
+    left: 27.14vw;
     background-image: url('../Images/countryMap/country14.svg');
 }
 
 .map15 {
-    top: 27.072px;
-    left: 476.928px;
+    /* top: 27.072px;
+    left: 476.928px; */
+    width: 1.25vw;
+    height: 0.75vw;
+    top: 1.4vw;
+    left: 24.84vw;
     background-image: url('../Images/countryMap/country15.svg');
 }
 
 .map16 {
-    top: 17.088px;
-    left: 508.992px;
+    /* top: 17.088px;
+    left: 508.992px; */
+    width: 2.76vw;
+    height: 1.5vw;
+    top: 0.9vw;
+    left: 26.5vw;
     background-image: url('../Images/countryMap/country16.svg');
 }
 
 .map17 {
+    width: 39.06vw;
+    height: 20vw;
+    top: 0vw;
+    left: 0vw;
     background-image: url('../Images/countryMap/countryBackground.svg');
     z-index: 1;
 }
@@ -957,7 +1028,7 @@ main {
 
 #map h3 {
     font-weight: 700;
-    font-size: 45px;
+    font-size: calc(1rem + 1.51vw);
     line-height: 60px;
     font-style: normal;
     margin-bottom: 3px;
@@ -965,7 +1036,7 @@ main {
 
 #map h4 {
     font-weight: 400;
-    font-size: 30px;
+    font-size: calc(1rem + 0.73vw);
     line-height: 39.99px;
     text-align: end;
     margin-bottom: 2vw;
@@ -974,15 +1045,15 @@ main {
 #map p {
     width: 28.125vw;
     font-weight: 400;
-    font-size: 20px;
+    font-size: calc(1rem + 0.21vw);
     line-height: 24px;
     text-align: end;
-    margin-bottom: 6.3vw;
 }
 
 #map-div img {
-    width: 472px;
-    height: 756px;
+    width: 28vw;
+    max-width: 800px;
+    height: auto;
     margin-top: -10.42vw;
     margin-left: 5.5vw;
     border-radius: 20px;

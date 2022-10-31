@@ -63,13 +63,14 @@ const changeText = (num) => {
 }
 
 const showCity = (event) => {
-    let selectionClass = event.target.parentNode.classList[1];
+    console.log(event.target.classList[1]);
+    let selectionClass = event.target.classList[1];
     let number = changeImage(selectionClass);
     changeText(number);
     mapArray.forEach((item) => {
         item.classList.remove('clickedMap');
     })
-    event.target.parentNode.classList.add('clickedMap');
+    event.target.classList.add('clickedMap');
 }
 
 const hoveringCities = (event) => {
