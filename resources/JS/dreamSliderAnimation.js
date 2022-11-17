@@ -1,5 +1,7 @@
 // Declaramos las variables del DOM
-const imagesArray = Array.from(document.getElementsByClassName('dream-image-div'));
+
+const imagesArrayContainer = Array.from(document.getElementsByClassName('dream-image-div'));
+const imagesArray = Array.from(document.getElementsByClassName('dream-image'));
 
 
 // Definimos las funciones que se activan con el click
@@ -29,15 +31,21 @@ const createDiv = (index) => {
         case 3:
             cityParagraph.innerHTML = 'Ouarzazate';
             break;
+        case 4:
+            cityParagraph.innerHTML = 'Lorem Ipsum';
+            break;
     }
 
     return cityDiv;
 }
 
 const showCityCard = (event) => {
-    let index = imagesArray.indexOf(event.target);
+    let index = imagesArrayContainer.indexOf(event.target);
     const cityCard = createDiv(index);
     event.target.appendChild(cityCard);
+    imagesArray[index].style.backgroundSize = '100% 120%';
+    imagesArray[index].style.borderBottomLeftRadius = '0';
+    imagesArray[index].style.borderBottomRightRadius = '0';
 }
 
 const removeCityCard = (event) => {
@@ -45,24 +53,29 @@ const removeCityCard = (event) => {
         const cityCard = document.querySelector('.city-card');
         event.target.removeChild(cityCard);
     }
+    let index = imagesArrayContainer.indexOf(event.target);
+    imagesArray[index].style.backgroundSize = '100% 100%';
+    imagesArray[index].style.borderBottomLeftRadius = '20px';
+    imagesArray[index].style.borderBottomRightRadius = '20px';
 }
 
 
 // Añadimos escuchadores a las flechas
 
-imagesArray.forEach((image) => {
+imagesArrayContainer.forEach((image) => {
     image.addEventListener('mouseenter', showCityCard);
     image.addEventListener('mouseleave', removeCityCard);
 })
 
-// Scrolling with drag movement
+// Añadimos scroll con un drag
 
 // const dragBox = document.getElementById('drag');
 const dragContainer = document.getElementById('dream-images-slide');
 let initialPosition;
 
 const scrollingDiv = (event) => {
-  dragContainer.scrollLeft = (event.clientX - initialPosition);
+    const dx = event.clientX - initialPosition;
+    dragContainer.scrollLeft = (dragContainer.scrollLeft - dx);
 }
 
 const cancelFunction = () => {
@@ -73,8 +86,17 @@ const cancelFunction = () => {
 const mouseDownFunction = (event) => {
   initialPosition = event.clientX;
   dragContainer.style.cursor = "grabbing";
+  
   dragContainer.addEventListener('mousemove', scrollingDiv);
+  dragContainer.addEventListener('mouseup', cancelFunction);
 }
 
 dragContainer.addEventListener('mousedown', mouseDownFunction);
-dragContainer.addEventListener('mouseup', cancelFunction);
+
+// Añadimos que las imágenes sean clicables
+
+const clickOnImage = (event) => {
+    // console.log(event.target);
+}
+
+imagesArray.forEach((image) => image.addEventListener('click', clickOnImage));

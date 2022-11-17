@@ -11,12 +11,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <title>Sense Morocco</title>
 </head>
-<body>
-    <header>
+<body id="body">
+    <header id="header">
         <img id="logo-header" src="./resources/Images/Logo.svg" alt="Sense logo">
-        <img id="hamburger-header" src="./resources/Images/hamburger-menu.svg" alt="Hamburger menu">
+        <div id="hamburger-header">
+            <div class='menu-line line01'></div>
+            <div class='menu-line line02'></div>
+            <div class='menu-line line03'></div>
+        </div>
     </header>
-    <main>
+    <div id="menu-container">
+        <div class="menu-image left-image"></div>
+        <div id="list-container">
+            <ul class="list-ul">
+                <li class="list-items list-dream-cities">
+                    <a href="#" class="list-items-link">
+                        <img src="./resources/Images/menuImages/dream-cities-mandala.svg" />
+                        <p>Dream Cities</p>
+                        <img src="./resources/Images/menuImages/dream-cities-mandala.svg" />
+                    </a>
+                </li>
+                <li class="list-items list-magic-regions">
+                    <a href="#" class="list-items-link">
+                        <img src="./resources/Images/menuImages/magic-regions-mandala.svg" />
+                        <p>Magic Regions</p>
+                        <img src="./resources/Images/menuImages/magic-regions-mandala.svg" />
+                    </a>
+                </li>
+                <li class="list-items list-fabulous-food">
+                    <a href="#" class="list-items-link">
+                        <img src="./resources/Images/menuImages/dream-cities-mandala.svg" />
+                        <p>Fabulous Food</p>
+                        <img src="./resources/Images/menuImages/dream-cities-mandala.svg" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-image right-image"></div>
+        <div class="menu-image middle-image"></div>
+        <div class="menu-image left-background"></div>
+        <div class="menu-image right-background"></div>
+    </div>
+    <main id="main">
         <section id="banner">
             <div id="sky"></div>
             <div id="back-desert"></div>
@@ -55,6 +91,7 @@
             </div>
         </section>
         <section id="culture-lose">
+            <div id="culture-tram"></div>
             <div id="culture-text">
                 <div id="culture-heading">
                     <div id="culture-mandala">
@@ -84,17 +121,21 @@
             <div id="dream-slide">
                 <div id="dream-images-slide">
                     <div class="dream-image-div dream-image1">
-                        <img class="dream-image image1" src="./resources/Images/dreamSlider/dream1.png" alt="Arabic architecture tower">
+                        <div class="dream-image image1"></div>
                     </div>
                     <div class="dream-image-div">
-                        <img class="dream-image image2" src="./resources/Images/dreamSlider/dream2.png" alt="Blue teahose">
+                        <div class="dream-image image2"></div>
                     </div>
                     <div class="dream-image-div">
-                        <img class="dream-image image3" src="./resources/Images/dreamSlider/dream3.png" alt="Arabic architecture white tower">
+                        <div class="dream-image image3"></div>
                     </div>
                     <div class="dream-image-div dream-image4">
-                        <img class="dream-image image4" src="./resources/Images/dreamSlider/dream4.png" alt="Arabic architecture castle">
+                        <div class="dream-image image4"></div>
                     </div>
+                    <div class="dream-image-div dream-image5">
+                        <div class="dream-image image5"></div>
+                    </div>
+                    <div id="dream-slider-gaps"></div>
                 </div>
             </div>
         </section>
@@ -173,7 +214,7 @@
             <div id="map-background"></div>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <img id="logo-footer" src="./resources/Images/Logo.svg" alt="Sense logo">
     </footer>
 
@@ -182,5 +223,6 @@
     <script src="./resources/JS/dreamSliderAnimation.js" defer></script>
     <script src="./resources/JS/mapAnimation.js" defer></script>
     <script src="./resources/JS/logoAnimation.js" defer></script>
+    <script src="./resources/JS/menu.js" defer></script>
 </body>
 </html>

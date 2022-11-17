@@ -63,7 +63,6 @@ const changeText = (num) => {
 }
 
 const showCity = (event) => {
-    console.log(event.target.classList[1]);
     let selectionClass = event.target.classList[1];
     let number = changeImage(selectionClass);
     changeText(number);
