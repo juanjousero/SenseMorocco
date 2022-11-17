@@ -67,15 +67,18 @@ imagesArrayContainer.forEach((image) => {
     image.addEventListener('mouseleave', removeCityCard);
 })
 
-// Añadimos scroll con un drag
+// Añadimos scroll con un drag y movilidad con este drag a la barra de progreso
 
-// const dragBox = document.getElementById('drag');
 const dragContainer = document.getElementById('dream-images-slide');
+// const progressBar = document.getElementById('progress-bar-inner');
 let initialPosition;
 
 const scrollingDiv = (event) => {
     const dx = event.clientX - initialPosition;
     dragContainer.scrollLeft = (dragContainer.scrollLeft - dx);
+    // if (-dx / 10 >= 0) {
+    //     progressBar.style.marginLeft = -(dx / 9.5) + 'px';
+    // }
 }
 
 const cancelFunction = () => {
@@ -100,3 +103,36 @@ const clickOnImage = (event) => {
 }
 
 imagesArray.forEach((image) => image.addEventListener('click', clickOnImage));
+
+// Añadimos que la barra de progreso se mueva según se vean unas imágenes u otras
+
+const progressBar = document.getElementById('progress-bar-inner');
+const barNumber = document.getElementById('bar-number');
+const image01 = imagesArray[0];
+const image04 = imagesArray[3];
+const image05 = imagesArray[4];
+
+let observerImage01 = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting === true) {
+        progressBar.style.marginLeft = '0px';
+        barNumber.innerHTML = '03';
+    }
+}, {threshold: 1.0})
+
+let observerImage04 = new IntersectionObserver(function(entries) {
+    if (entries[0].isIntersecting === true) {
+        progressBar.style.marginLeft = '85px';
+        barNumber.innerHTML = '04';
+    }
+}, {threshold: 1.0})
+
+let observerImage05 = new IntersectionObserver(function(entries) {
+    if(entries[0].isIntersecting === true) {
+        progressBar.style.marginLeft = '163px';
+        barNumber.innerHTML = '05';
+    }
+}, {threshold: 1.0});
+
+observerImage01.observe(image01);
+observerImage04.observe(image04);
+observerImage05.observe(image05);

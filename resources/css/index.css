@@ -709,7 +709,7 @@ main {
 
 #dream-cities {
     width: 100%;
-    min-height: 61.146vw;
+    min-height: 54.146vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -756,9 +756,9 @@ main {
 
 #dream-slide {
     width: 100%;
-    height: 55.93vw;
+    height: 48.93vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     overflow-x: hidden;
@@ -838,6 +838,30 @@ main {
     width: 20.5vw;
     height: 27.9vw;
     margin-right: 15.5%;
+}
+
+#dream-slide-bar {
+    width: 100%;
+    height: 2.1vw;
+    margin-left: -15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#progress-bar-outer {
+    width: 23.9vw;
+    height: 0.35vw;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#progress-bar-inner {
+    width: 15.4vw;
+    height: 0.35vw;
+    border-radius: 6px;
+    background-color: rgba(201, 170, 77, 1);
 }
 
 .city-card {
