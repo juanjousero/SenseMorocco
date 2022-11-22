@@ -668,7 +668,7 @@ main {
     font-size: 20px;
     font-weight: 700;
     line-height: 26.66px;
-    margin-top: -5px;
+    margin-top: 3px;
     margin-bottom: 60px;
     padding-left: 103px;
     box-sizing: border-box;
@@ -709,7 +709,7 @@ main {
 
 #dream-cities {
     width: 100%;
-    min-height: 54.146vw;
+    min-height: 52.146vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -972,6 +972,7 @@ main {
 #country-title h2 {
     font-weight: 700;
     padding-left: 97px;
+    margin-top: 3px;
 }
 
 #map-div {
@@ -1037,8 +1038,6 @@ main {
 }
 
 .map05 {
-    /* top: -5.952px;
-    left: 628.032px; */
     width: 6.51vw;
     height: 4.5vw;
     top: -0.31vw;
@@ -1047,8 +1046,6 @@ main {
 }
 
 .map06 {
-    /* top: 67.968px;
-    left: 372.096px; */
     width: 11.98vw;
     height: 4vw;
     top: 3.54vw;
@@ -1057,8 +1054,6 @@ main {
 }
 
 .map07 {
-    /* top: 15.936px;
-    left: 533.952px; */
     width: 7.14vw;
     height: 5vw;
     top: 0.83vw;
@@ -1067,8 +1062,6 @@ main {
 }
 
 .map08 {
-    /* top: 253.056px;
-    left: 0px; */
     width: 15vw;
     height: 7vw;
     top: 13.18vw;
@@ -1077,8 +1070,6 @@ main {
 }
 
 .map09 {
-    /* top: -3.072px;
-    left: 570.048px; */
     width: 4.9vw;
     height: 2vw;
     top: -0.16vw;
@@ -1087,8 +1078,6 @@ main {
 }
 
 .map10 {
-    /* top: 44.928px;
-    left: 503.04px; */
     width: 3.7vw;
     height: 2vw;
     top: 2.34vw;
@@ -1097,8 +1086,6 @@ main {
 }
 
 .map11 {
-    /* top: -15.936px;
-    left: 537.024px; */
     width: 3.59vw;
     height: 1.4vw;
     top: -0.83vw;
@@ -1107,8 +1094,6 @@ main {
 }
 
 .map12 {
-    /* top: 24px;
-    left: 466.944px; */
     width: 4.58vw;
     height: 2vw;
     top: 1.25vw;
@@ -1117,8 +1102,6 @@ main {
 }
 
 .map13 {
-    /* top: 14.016px;
-    left: 569.088px; */
     width: 5.36vw;
     height: 2vw;
     top: 0.73vw;
@@ -1127,8 +1110,6 @@ main {
 }
 
 .map14 {
-    /* top: 0.96px;
-    left: 521.088px; */
     width: 3.13vw;
     height: 1.2vw;
     top: 0.05vw;
@@ -1137,8 +1118,6 @@ main {
 }
 
 .map15 {
-    /* top: 27.072px;
-    left: 476.928px; */
     width: 1.25vw;
     height: 0.75vw;
     top: 1.4vw;
@@ -1147,8 +1126,6 @@ main {
 }
 
 .map16 {
-    /* top: 17.088px;
-    left: 508.992px; */
     width: 2.76vw;
     height: 1.5vw;
     top: 0.9vw;
@@ -1197,10 +1174,11 @@ main {
     text-align: end;
 }
 
-#map-div img {
-    width: 28vw;
+#country-image {
+    width: 24.58vw;
     max-width: 800px;
-    height: auto;
+    height: 39.375vw;
+    max-height: 1281.44px;
     margin-top: -10.42vw;
     margin-left: 5.5vw;
     border-radius: 20px;
@@ -1326,8 +1304,7 @@ footer::after {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* border: 0.1px solid transparent;
-    border-radius: 2px; */
+    opacity: 0;
 }
 
 .left-image {
@@ -1413,8 +1390,9 @@ footer::after {
 
 .list-items:hover img {
     opacity: 1;
-    transition: opacity 1s linear;
+    transition: opacity 0.5s linear;
 }
+
 
 /* .list-items-link::after {
     content: '';
@@ -1435,6 +1413,10 @@ footer::after {
     animation: fadeInMenu 0.8s forwards ease-in;
 }
 
+.fade-in-images {
+    animation: fadeInImages 1s forwards linear;
+}
+
 @keyframes fadeInMenu {
     0% {
         visibility: hidden;
@@ -1445,6 +1427,16 @@ footer::after {
     100% {
         visibility: visible;
         margin-left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImages {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
         opacity: 1;
     }
 }
