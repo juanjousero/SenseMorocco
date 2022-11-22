@@ -606,7 +606,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-image: url('../Images/platos-marruecos.png');
+    background-image: url('../Images/platos-marruecos.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -814,23 +814,23 @@ main {
 }
 
 .image1 {
-    background-image: url('../Images/dreamSlider/dream1.png');
+    background-image: url('../Images/dreamSlider/dream1.jpg');
 }
 
 .image2 {
-    background-image: url('../Images/dreamSlider/dream2.png');
+    background-image: url('../Images/dreamSlider/dream2.jpg');
 }
 
 .image3 {
-    background-image: url('../Images/dreamSlider/dream3.png');
+    background-image: url('../Images/dreamSlider/dream3.jpg');
 }
 
 .image4 {
-    background-image: url('../Images/dreamSlider/dream4.png');
+    background-image: url('../Images/dreamSlider/dream4.jpg');
 }
 
 .image5 {
-    background-image: url('../Images/dreamSlider/dream5.png');
+    background-image: url('../Images/dreamSlider/dream5.jpg');
     margin-right: 15%;
 }
 
@@ -1204,7 +1204,7 @@ main {
 #map-background {
     width: 100%;
     height: 33.07vw;
-    background-image: url('../Images/countryMap/countryDivImage.png');
+    background-image: url('../Images/countryMap/countryDivImage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
