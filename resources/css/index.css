@@ -1,5 +1,5 @@
 html, body {
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     min-height: 100vh;
@@ -784,6 +784,11 @@ main {
     scrollbar-color: transparent transparent;
     user-select: none;
     scroll-behavior: smooth;
+}
+
+#dream-images-slide::-webkit-scrollbar {
+    width: 0;
+    color: transparent transparent;
 }
 
 .dream-image-div {
